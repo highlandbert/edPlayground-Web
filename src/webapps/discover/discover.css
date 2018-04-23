@@ -1,0 +1,98 @@
+.section.main {
+  background: black;
+}
+
+.section.main .container {
+  position: relative;
+}
+
+.header {
+  padding: 0em 0em;
+  display: flex;
+}
+
+.brand {
+  margin: -1em;
+  border-radius: 0em;
+  line-height: 3.25em;
+}
+
+.header h1 {
+  color: white;
+}
+
+.header .links {
+  margin-left: auto;
+}
+
+.top {
+  background: url("generic.jpg");
+  background-size: cover;
+  padding: 3.5em 1em;
+  text-align: center;
+  color: white;
+}
+
+.top h1 {
+  margin: 0.5em;
+}
+
+.top p {
+  margin-bottom: 1.5em;
+}
+
+.top a {
+  padding: 1em 2em;
+}
+
+.syllabus {
+  padding: 0em;
+}
+
+.syllabus p {
+  color: #333;
+  padding: 0.25em 0em;
+}
+
+.syllabus h3 {
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.syllabus h1 {
+  margin-top: 1em;
+}
+
+.syllabus a {
+  margin: 0 auto;
+  display: block;
+  width: 10em;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+.instructor {
+  margin: 1em 0em;
+  display: flex;
+}
+
+.instructor img {
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  margin-right: 1em;
+}
+
+.instructor h3 {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+
+@media screen and (min-width: 780px) {
+
+}
+
+@media screen and (min-width: 1000px) {
+
+}

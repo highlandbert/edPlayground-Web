@@ -1,0 +1,114 @@
+.section.main {
+  background: black;
+}
+
+.section.main .container {
+  position: relative;
+}
+
+.header {
+  display: flex;
+}
+
+.brand {
+  margin: -1em;
+  border-radius: 0em;
+  line-height: 3.25em;
+}
+
+.header h1 {
+  color: white;
+}
+
+.header .links {
+  margin-left: auto;
+}
+
+.pitch {
+  color: white;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.pitch > .image {
+  background: #f2f2f2;
+  height: 200px;
+  width: 420px;
+  border-radius: 0.2em;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+  color: black;
+}
+
+.pitch > p {
+  margin-bottom: 0.5em;
+}
+
+.pitch > a {
+  display: block;
+}
+
+.demo {
+  position: absolute;
+  right: 0px;
+  height: 400px;
+  width: 270px;
+  background: white;
+  top: 100px;
+  border-radius: 0.2em;
+  background: #f2f2f2;
+}
+
+.cool-things {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.cool-thing {
+  padding: 1em;
+}
+
+.cool-thing i {
+  display: block;
+  font-size: 3em;
+  padding: 0.3em;
+  text-align: center;
+}
+
+.featured {
+  min-height: 16em;
+  background: url('memphis-colorful.png');
+}
+
+.contact {
+  padding-top: 1em;
+  text-align: center;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.contact input {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  min-width: 20em;
+}
+
+.contact textarea {
+  min-height: 200px;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 780px) {
+  .pitch {
+    width: 420px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .demo {
+    right: 120px;
+  }
+}
