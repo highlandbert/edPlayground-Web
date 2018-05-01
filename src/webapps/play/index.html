@@ -1,0 +1,37 @@
+<!doctype>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>edPlayground Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div id="level">
+        <div class="info">
+            <i class="fa fa-info-circle"></i>
+            <p id="user">Roberto</p>
+            <p id="name">...</p>
+        </div>
+        <div class="fullscreen" onclick="toggleFullscreen()">
+            <i class="fa fa-expand"></i>
+        </div>
+        <div id="e404">
+            <p>404</p>
+            <a class="back" href="#"></a>
+        </div>
+        <div id="finished">
+            <p>Level Finished!</p>
+            <p id="time">00:00:00</p>
+            <a class="back" href="#"></a>
+        </div>
+    </div>
+
+    <script src="http://edplayground.com:8080/cdn/playground.js"></script>
+    <script src="js/fullscreen.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
