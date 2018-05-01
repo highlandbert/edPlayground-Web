@@ -8,6 +8,7 @@
 
 .header {
   display: flex;
+  flex-direction: column;
 }
 
 .brand {
@@ -21,7 +22,8 @@
 }
 
 .header .links {
-  margin-left: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .pitch {
@@ -140,4 +142,19 @@
 
 .contact a {
   margin-bottom: 1em;
+}
+
+@media screen and (min-width: 780px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .header .links {
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
 }

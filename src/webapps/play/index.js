@@ -230,15 +230,14 @@ if (!_auth_service__WEBPACK_IMPORTED_MODULE_0__["default"].hasCredentials()) {
   _auth_service__WEBPACK_IMPORTED_MODULE_0__["default"].doLogin();
 }
 
-console.log(_auth_service__WEBPACK_IMPORTED_MODULE_0__["default"].getUsername());
+let levelId = 0; // 5ae83a4eaef23b03bc566220;
+let redirect = '';
+let hasScores = false;
+let startDate = undefined;
 
 document.getElementById('user').innerText = _auth_service__WEBPACK_IMPORTED_MODULE_0__["default"].getUsername();
 
 const params = location.search.replace('?', '').split('&');
-
-let levelId = 0; // '5aa27062a8669d1a785f511b';
-let redirect = '';
-
 for (const param of params) {
   if (param.includes('level=')) {
     levelId = param.replace('level=', '');
@@ -247,9 +246,6 @@ for (const param of params) {
     redirect = param.replace('redirect=', '');
   }
 }
-
-console.log(levelId);
-console.log(redirect);
 
 if (redirect !== '') {
   const links = document.getElementsByClassName('back');
@@ -265,10 +261,10 @@ const addScript = (id) => {
   document.body.appendChild(script);
 };
 
-let hasScores = false;
 
 _api_service__WEBPACK_IMPORTED_MODULE_1__["default"].get(`levels/${levelId}`).then(level => {
   console.log(level);
+  startDate = new Date();
   hasScores = level.hasScores;
   document.getElementById('name').innerText = level.name;
   addScript(levelId);
@@ -283,17 +279,28 @@ playground.events.onLevelFinished = () => {
   const auth = _auth_service__WEBPACK_IMPORTED_MODULE_0__["default"].getCredentials();
   const userId = auth._id;
 
+  const endDate = new Date();
+  const seconds = Math.floor((endDate - startDate) / 1000);
+
   var params = new URLSearchParams();
   params.set('levelId', levelId);
   params.set('userId', userId);
-  params.set('seconds', 0);
+  params.set('seconds', seconds);
 
   console.log(userId);
+  console.log(seconds);
   document.getElementById('finished').className = 'show';
-  document.getElementById('time').innerText = hasScores ? '00:00:00' : '';
+  document.getElementById('time').innerText = hasScores ? renderSeconds(seconds) : '';
   return _api_service__WEBPACK_IMPORTED_MODULE_1__["default"].post(`levelsResults`, params);
 };
 
+function renderSeconds(seconds) {
+  let h = 0, m = 0, s = 0;
+  s = seconds % 60;
+  m = Math.floor((seconds / 60) % 60);
+  h = Math.floor((seconds / 60) / 60);
+  return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`
+}
 
 
 
