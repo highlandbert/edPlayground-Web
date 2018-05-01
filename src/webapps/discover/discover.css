@@ -26,7 +26,7 @@
 }
 
 .top {
-  background: url("generic.jpg");
+  background: url("back.png");
   background-size: cover;
   padding: 3.5em 1em;
   text-align: center;
@@ -35,10 +35,12 @@
 
 .top h1 {
   margin: 0.5em;
+  text-shadow: 2px 2px 4px #00000040;
 }
 
 .top p {
   margin-bottom: 1.5em;
+  text-shadow: 2px 2px 4px #00000040;
 }
 
 .top a {

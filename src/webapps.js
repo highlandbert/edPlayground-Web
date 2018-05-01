@@ -7,6 +7,7 @@ const setup = (app) => {
     addWebapp(app, '/discover', 'webapps/discover');
     addWebapp(app, '/learn', 'webapps/learn');
     addWebapp(app, '/auth', 'webapps/auth');
+    addWebapp(app, '/play', 'webapps/play');
 
 };
 
