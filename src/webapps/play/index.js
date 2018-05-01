@@ -202,8 +202,8 @@ class AuthService {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 const Config = {
-  api: 'http://localhost:8080/api',
-  cdn: 'http://localhost:8080/cdn'
+  api: 'http://edplayground.com:8080/api',
+  cdn: 'http://edplayground.com:8080/cdn'
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Config);
